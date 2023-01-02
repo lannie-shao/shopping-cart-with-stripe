@@ -20,7 +20,7 @@ const CARD=styled.div`
     flex-wrap:wrap;
     gap:20px;
 `
-const store = () => {
+const Store = () => {
   return (
     <DIV>
         <HEAD>WELCOME TO THE STORE</HEAD>
@@ -33,4 +33,4 @@ const store = () => {
   )
 }
 
-export default store
+export default Store

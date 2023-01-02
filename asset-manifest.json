@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/shopping-cart-with-stripe/static/js/main.82c34d0e.js",
+    "static/js/787.26f70c15.chunk.js": "/shopping-cart-with-stripe/static/js/787.26f70c15.chunk.js",
+    "index.html": "/shopping-cart-with-stripe/index.html",
+    "main.82c34d0e.js.map": "/shopping-cart-with-stripe/static/js/main.82c34d0e.js.map",
+    "787.26f70c15.chunk.js.map": "/shopping-cart-with-stripe/static/js/787.26f70c15.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.82c34d0e.js"
+  ]
+}

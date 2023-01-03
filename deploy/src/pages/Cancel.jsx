@@ -2,7 +2,7 @@ import React from 'react'
 
 const Cancel = () => {
   return (
-    <div>You cancel your payment.</div>
+    <div style={{padding:25,fontSize:24}}>You payment has been canceled.</div>
   )
 }
 

@@ -1,5 +1,4 @@
 import React,{useContext} from 'react'
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import {GiTireIronCross} from 'react-icons/gi'
 import { CartContext } from '../CartContext'
@@ -87,8 +86,24 @@ const Button=styled.button`
 export const Cart = ({setToggle}) => {
   const cartData=useContext(CartContext)
   
-    const handleClick=()=>{
-
+  
+    const handleCheckout=async()=>{
+        await fetch('http://localhost:4000/checkout',{
+            method:'POST',
+            headers:{
+                'content-type':'application/json',
+                'Access-Control-Allow-Origin':'*',
+                'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS',               
+                'Access-Control-Allow-Headers': 'Origin, X-Api-Key, X-Requested-With, Content-Type, Accept, Authorization',
+            },
+            body:JSON.stringify({items:cartData.item})
+        }).then(res=>{
+            return res.json()
+        }).then(res=>{
+            if(res.url){
+                window.location.assign(res.url)
+            }
+        })
     }
   return (
     <DIV>
@@ -101,8 +116,7 @@ export const Cart = ({setToggle}) => {
         }
         <Price type='total'>Total Price is: ${cartData.getTotalPrice().toFixed(2)}</Price>
         <Span>
-        <Button onClick={handleClick}>Checkout</Button>
-        <Button onClick={<Link to='cancel'/>}>Cancel</Button>
+        <Button onClick={handleCheckout}>Checkout</Button>
         </Span>
     </DIV>
   )

@@ -12,7 +12,7 @@ function App() {
      <Navbar/>
      <BrowserRouter>
       <Routes>
-        <Route index='/' element={<Store />}/>
+        <Route index element={<Store />}/>
         <Route path='cancel' element={<Cancel />}/>
         <Route path='success' element={<Success />} />
       </Routes>
